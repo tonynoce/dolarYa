@@ -1,6 +1,9 @@
 # Disclaimer
 This is my first app ! I'm learning python so every feedback is welcome ! :)
 
+<br/>
+<br/>
+
 # dolarYa
 PythonApp to get the price of the dollar and perform convertions to ARS
 
