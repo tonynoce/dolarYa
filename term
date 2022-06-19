@@ -1,0 +1,369 @@
+# Vim 8.2 generó este archivo "viminfo".
+# Puede editarlo, ¡sólo si tiene cuidado!
+
+# Viminfo version
+|1,4
+
+# Valor de 'encoding' cuando se escribió este archivo
+*encoding=latin1
+
+
+# hlsearch on (H) or off (h):
+~h
+# Último Patrón de búsqueda:
+~Msle0~/\<in\>
+
+# Historia de Línea de órdenes (de lo más nuevo a lo más antiguo):
+:wv term
+|2,0,1655600432,,"wv term"
+:window terminal
+|2,0,1655600424,,"window terminal"
+:w
+|2,0,1655600322,,"w"
+:b3
+|2,0,1655600140,,"b3"
+:ls
+|2,0,1655600132,,"ls"
+:e main.py
+|2,0,1655600129,,"e main.py"
+:cd Documents\DolarYa\
+|2,0,1655600107,,"cd Documents\\DolarYa\\"
+:help window
+|2,0,1655599871,,"help window"
+:/undesired
+|2,0,1655599622,,"/undesired"
+:W
+|2,0,1655598977,,"W"
+:w!
+|2,0,1655598365,,"w!"
+:e iterateExercise01.py
+|2,0,1655598258,,"e iterateExercise01.py"
+:term
+|2,0,1655598246,,"term"
+:q
+|2,0,1655598058,,"q"
+:open iterateExersice.py
+|2,0,1655598056,,"open iterateExersice.py"
+:open test.py
+|2,0,1655598029,,"open test.py"
+:open 
+|2,0,1655598019,,"open "
+:open
+|2,0,1655598009,,"open"
+:exit
+|2,0,1655597999,,"exit"
+:b6
+|2,0,1655597995,,"b6"
+:b2
+|2,0,1655597979,,"b2"
+:help buffer
+|2,0,1655597888,,"help buffer"
+:help buffer close
+|2,0,1655597885,,"help buffer close"
+:b help
+|2,0,1655597880,,"b help"
+:bc
+|2,0,1655597877,,"bc"
+:w iterateExercise01.py
+|2,0,1655597842,,"w iterateExercise01.py"
+:q!
+|2,0,1655597775,,"q!"
+:loadview
+|2,0,1655597773,,"loadview"
+:pack
+|2,0,1655597764,,"pack"
+:plugins
+|2,0,1655597761,,"plugins"
+:colorscheme
+|2,0,1655597614,,"colorscheme"
+:buffer
+|2,0,1655597542,,"buffer"
+:b
+|2,0,1655597538,,"b"
+:c
+|2,0,1655597526,,"c"
+:e! iterateExercise01.py!
+|2,0,1655597519,,"e! iterateExercise01.py!"
+:pwd
+|2,0,1655597482,,"pwd"
+:e iterateExercise01.py!
+|2,0,1655597475,,"e iterateExercise01.py!"
+:echohl
+|2,0,1655581806,,"echohl"
+:wq
+|2,0,1655530791,,"wq"
+:/*
+|2,0,1655528157,,"/*"
+:/s
+|2,0,1655528150,,"/s"
+:e
+|2,0,1655523059,,"e"
+:w harvestWigo_10_transaction_loop.py
+|2,0,1655507460,,"w harvestWigo_10_transaction_loop.py"
+:e harvestWigo_09_transaction_loop.py
+|2,0,1655506721,,"e harvestWigo_09_transaction_loop.py"
+:cd Documents\FantomTestZone\
+|2,0,1655506700,,"cd Documents\\FantomTestZone\\"
+:e! test.py
+|2,0,1655499633,,"e! test.py"
+:colorscheme desert
+|2,0,1655499620,,"colorscheme desert"
+:e test.py
+|2,0,1655498981,,"e test.py"
+:python import sys
+|2,0,1655498684,,"python import sys"
+:python
+|2,0,1655498677,,"python"
+:python3 import sys; print(sys.version)
+|2,0,1655498671,,"python3 import sys; print(sys.version)"
+:python import sys; print(sys.version)
+|2,0,1655498652,,"python import sys; print(sys.version)"
+:colorscheme evening
+|2,0,1655498432,,"colorscheme evening"
+:w test.py
+|2,0,1655498030,,"w test.py"
+:test.py
+|2,0,1655498025,,"test.py"
+:packpath
+|2,0,1655497993,,"packpath"
+:help load-plugins
+|2,0,1655497954,,"help load-plugins"
+:packadd
+|2,0,1655497769,,"packadd"
+:h packages
+|2,0,1655497754,,"h packages"
+:q:
+|2,0,1655497677,,"q:"
+:.!!
+|2,0,1655497614,,".!!"
+:font
+|2,0,1655497541,,"font"
+:e ..\..\..\Lucas\_vimrc
+|2,0,1655497468,,"e ..\\..\\..\\Lucas\\_vimrc"
+:colorscheme delek
+|2,0,1655497413,,"colorscheme delek"
+:colorscheme default
+|2,0,1655497407,,"colorscheme default"
+:e Documents\FantomTestZone\harvestWigo_09_transaction.py
+|2,0,1655497341,,"e Documents\\FantomTestZone\\harvestWigo_09_transaction.py"
+:colorscheme zellner
+|2,0,1655497299,,"colorscheme zellner"
+:help plugin
+|2,0,1655497252,,"help plugin"
+:plugin
+|2,0,1655497248,,"plugin"
+:help vimrc
+|2,0,1655496982,,"help vimrc"
+:path
+|2,0,1655496975,,"path"
+:help version
+|2,0,1655496813,,"help version"
+
+# Historia de Cadena de búsqueda (de lo más nuevo a lo más antiguo):
+? \<in\>
+|2,1,1655599665,,"\\<in\\>"
+? \<if\>
+|2,1,1655599626,,"\\<if\\>"
+? undesired
+|2,1,1655599622,,"undesired"
+?/waitin
+|2,1,1655530616,47,"waitin"
+? *
+|2,1,1655528157,,"*"
+? s
+|2,1,1655528150,,"s"
+? \<GasPrice\>
+|2,1,1655528103,,"\\<GasPrice\\>"
+? \/\/
+|2,1,1655498540,,"\\/\\/"
+? \<Documents\>
+|2,1,1655498377,,"\\<Documents\\>"
+? \<BufNewFile\>
+|2,1,1655498369,,"\\<BufNewFile\\>"
+? \<unix\>
+|2,1,1655498362,,"\\<unix\\>"
+? \<q\>
+|2,1,1655497619,,"\\<q\\>"
+
+# Historia de Expresión (de lo más nuevo a lo más antiguo):
+
+# Historia de Línea de entrada (de lo más nuevo a lo más antiguo):
+
+# Historia de Debug Line (de lo más nuevo a lo más antiguo):
+
+# Registros:
+"0	LINE	0
+	    monto = float("Ingrese el monto por favor: \n",input())
+|3,0,0,1,1,0,1655600380,"    monto = float(\"Ingrese el monto por favor: \\n\",input())"
+""1	LINE	0
+	    print("Ingrese el monto por favor:")
+	    monto = float(input())
+|3,1,1,1,2,0,1655600401,"    print(\"Ingrese el monto por favor:\")","    monto = float(input())"
+"2	LINE	0
+	    print("Ingrese el monto por favor:")
+	    monto = float(input())
+|3,0,2,1,2,0,1655600353,"    print(\"Ingrese el monto por favor:\")","    monto = float(input())"
+"3	LINE	0
+	    ("Ingrese el monto por favor:")
+|3,0,3,1,1,0,1655600297,"    (\"Ingrese el monto por favor:\")"
+"4	LINE	0
+	    ("Ingrese el monto por favor:")
+|3,0,4,1,1,0,1655600215,"    (\"Ingrese el monto por favor:\")"
+"5	LINE	0
+	    if languagues == undesiredLanguagues:
+|3,0,5,1,1,0,1655599090,"    if languagues == undesiredLanguagues:"
+"6	LINE	0
+	    
+|3,0,6,1,1,0,1655598619,"    "
+"7	LINE	0
+	    while languague =! "Swif
+|3,0,7,1,1,0,1655598353,"    while languague =! \"Swif"
+"8	LINE	0
+	:ls
+|3,0,8,1,1,0,1655597552,":ls"
+"9	LINE	0
+	:ls
+|3,0,9,1,1,0,1655597552,":ls"
+"-	CHAR	0
+	 
+|3,0,36,0,1,0,1655600391," "
+
+# Marcas en el archivo:
+'0  45  3  ~\Documents\DolarYa\main.py
+|4,48,45,3,1655600432,"~\\Documents\\DolarYa\\main.py"
+'1  1  0  ~\iterateExersice.py
+|4,49,1,0,1655598058,"~\\iterateExersice.py"
+'2  1  0  ~\iterateExersice.py
+|4,50,1,0,1655598058,"~\\iterateExersice.py"
+'3  8  25  ~\iterateExercise01.py!
+|4,51,8,25,1655597999,"~\\iterateExercise01.py!"
+'4  8  25  ~\iterateExercise01.py!
+|4,52,8,25,1655597999,"~\\iterateExercise01.py!"
+'5  1  0  ~\Documents\AlgorandTestZone\AlgoTransaction.py
+|4,53,1,0,1655597775,"~\\Documents\\AlgorandTestZone\\AlgoTransaction.py"
+'6  1  0  ~\Documents\AlgorandTestZone\AlgoTransaction.py
+|4,54,1,0,1655597775,"~\\Documents\\AlgorandTestZone\\AlgoTransaction.py"
+'7  1  0  C:\Program Files\Neovim\bin\nvim.exe
+|4,55,1,0,1655576867,"C:\\Program Files\\Neovim\\bin\\nvim.exe"
+'8  1  0  C:\Program Files\Neovim\bin\nvim.exe
+|4,56,1,0,1655576867,"C:\\Program Files\\Neovim\\bin\\nvim.exe"
+'9  188  0  ~\Documents\FantomTestZone\harvestWigo_10_transaction_loop.py
+|4,57,188,0,1655574945,"~\\Documents\\FantomTestZone\\harvestWigo_10_transaction_loop.py"
+
+# Lista de saltos (el más reciente va primero):
+-'  45  3  ~\Documents\DolarYa\main.py
+|4,39,45,3,1655600432,"~\\Documents\\DolarYa\\main.py"
+-'  1  0  ~\Documents\DolarYa\main.py
+|4,39,1,0,1655600375,"~\\Documents\\DolarYa\\main.py"
+-'  94  0  ~\Documents\DolarYa\main.py
+|4,39,94,0,1655600370,"~\\Documents\\DolarYa\\main.py"
+-'  37  0  ~\Documents\DolarYa\main.py
+|4,39,37,0,1655600345,"~\\Documents\\DolarYa\\main.py"
+-'  38  4  ~\Documents\DolarYa\main.py
+|4,39,38,4,1655600341,"~\\Documents\\DolarYa\\main.py"
+-'  40  0  ~\Documents\DolarYa\main.py
+|4,39,40,0,1655600202,"~\\Documents\\DolarYa\\main.py"
+-'  34  0  ~\Documents\DolarYa\main.py
+|4,39,34,0,1655600200,"~\\Documents\\DolarYa\\main.py"
+-'  33  0  ~\Documents\DolarYa\main.py
+|4,39,33,0,1655600197,"~\\Documents\\DolarYa\\main.py"
+-'  28  0  ~\Documents\DolarYa\main.py
+|4,39,28,0,1655600196,"~\\Documents\\DolarYa\\main.py"
+-'  26  0  ~\Documents\DolarYa\main.py
+|4,39,26,0,1655600196,"~\\Documents\\DolarYa\\main.py"
+-'  21  0  ~\Documents\DolarYa\main.py
+|4,39,21,0,1655600196,"~\\Documents\\DolarYa\\main.py"
+-'  41  0  ~\Documents\DolarYa\main.py
+|4,39,41,0,1655600194,"~\\Documents\\DolarYa\\main.py"
+-'  48  0  ~\Documents\DolarYa\main.py
+|4,39,48,0,1655600194,"~\\Documents\\DolarYa\\main.py"
+-'  51  0  ~\Documents\DolarYa\main.py
+|4,39,51,0,1655600194,"~\\Documents\\DolarYa\\main.py"
+-'  53  0  ~\Documents\DolarYa\main.py
+|4,39,53,0,1655600194,"~\\Documents\\DolarYa\\main.py"
+-'  62  0  ~\Documents\DolarYa\main.py
+|4,39,62,0,1655600194,"~\\Documents\\DolarYa\\main.py"
+-'  83  0  ~\Documents\DolarYa\main.py
+|4,39,83,0,1655600194,"~\\Documents\\DolarYa\\main.py"
+-'  90  0  ~\Documents\DolarYa\main.py
+|4,39,90,0,1655600194,"~\\Documents\\DolarYa\\main.py"
+-'  92  0  ~\Documents\DolarYa\main.py
+|4,39,92,0,1655600194,"~\\Documents\\DolarYa\\main.py"
+-'  89  0  ~\Documents\DolarYa\main.py
+|4,39,89,0,1655600193,"~\\Documents\\DolarYa\\main.py"
+-'  61  0  ~\Documents\DolarYa\main.py
+|4,39,61,0,1655600192,"~\\Documents\\DolarYa\\main.py"
+-'  47  0  ~\Documents\DolarYa\main.py
+|4,39,47,0,1655600190,"~\\Documents\\DolarYa\\main.py"
+-'  18  0  ~\Documents\DolarYa\main.py
+|4,39,18,0,1655600190,"~\\Documents\\DolarYa\\main.py"
+-'  15  0  ~\Documents\DolarYa\main.py
+|4,39,15,0,1655600190,"~\\Documents\\DolarYa\\main.py"
+-'  12  0  ~\Documents\DolarYa\main.py
+|4,39,12,0,1655600190,"~\\Documents\\DolarYa\\main.py"
+-'  8  0  ~\Documents\DolarYa\main.py
+|4,39,8,0,1655600189,"~\\Documents\\DolarYa\\main.py"
+-'  6  0  ~\Documents\DolarYa\main.py
+|4,39,6,0,1655600189,"~\\Documents\\DolarYa\\main.py"
+-'  3  0  ~\Documents\DolarYa\main.py
+|4,39,3,0,1655600189,"~\\Documents\\DolarYa\\main.py"
+-'  1  0  ~\iterateExercise01.py
+|4,39,1,0,1655598246,"~\\iterateExercise01.py"
+-'  1  0  ~\iterateExercise01.py
+|4,39,1,0,1655598246,"~\\iterateExercise01.py"
+-'  1  0  ~\iterateExersice.py
+|4,39,1,0,1655598058,"~\\iterateExersice.py"
+-'  1  0  ~\iterateExersice.py
+|4,39,1,0,1655598058,"~\\iterateExersice.py"
+-'  1  0  ~\iterateExersice.py
+|4,39,1,0,1655598058,"~\\iterateExersice.py"
+-'  1  0  ~\iterateExersice.py
+|4,39,1,0,1655598058,"~\\iterateExersice.py"
+-'  1  0  ~\test.py
+|4,39,1,0,1655598056,"~\\test.py"
+-'  1  0  ~\test.py
+|4,39,1,0,1655598056,"~\\test.py"
+-'  1  0  ~\test.py
+|4,39,1,0,1655598056,"~\\test.py"
+-'  1  0  ~\test.py
+|4,39,1,0,1655598056,"~\\test.py"
+-'  8  25  ~\iterateExercise01.py!
+|4,39,8,25,1655597999,"~\\iterateExercise01.py!"
+-'  8  25  ~\iterateExercise01.py!
+|4,39,8,25,1655597999,"~\\iterateExercise01.py!"
+-'  8  25  ~\iterateExercise01.py!
+|4,39,8,25,1655597999,"~\\iterateExercise01.py!"
+-'  8  25  ~\iterateExercise01.py!
+|4,39,8,25,1655597999,"~\\iterateExercise01.py!"
+-'  8  25  ~\iterateExercise01.py!
+|4,39,8,25,1655597999,"~\\iterateExercise01.py!"
+-'  8  25  ~\iterateExercise01.py!
+|4,39,8,25,1655597999,"~\\iterateExercise01.py!"
+-'  5  0  ~\iterateExercise01.py
+|4,39,5,0,1655597995,"~\\iterateExercise01.py"
+-'  5  0  ~\iterateExercise01.py
+|4,39,5,0,1655597995,"~\\iterateExercise01.py"
+-'  5  0  ~\iterateExercise01.py
+|4,39,5,0,1655597995,"~\\iterateExercise01.py"
+
+# Historia de las marcas en los archivos (de la más reciente a la más antigua):
+
+> ~\Documents\DolarYa\main.py
+	*	1655600424	0
+	"	45	3
+	.	45	0
+	+	37	0
+	+	38	0
+	+	37	18
+	+	38	0
+	+	37	24
+	+	37	18
+	+	38	0
+	+	37	19
+	+	38	0
+	+	37	48
+	+	38	0
+	+	45	0
+	+	44	4
+	+	44	0
+	+	45	0

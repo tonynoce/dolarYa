@@ -34,63 +34,75 @@ Seleccione que operación desea:
 
 def swapARStoUSD():
     print("\n")
-    print("Ingrese el monto por favor:")
-    monto = float(input())
+    monto = abs(float(input("Ingrese el monto por favor: \n")))
     cotizacion = convertARStoUSD(monto)
     print(f"""==> USD$ {cotizacion:,.2f}""")
 
 
 def swapUSDtoARS():
     print("\n")
-    print("Ingrese el monto por favor:")
-    monto = float(input())
+    monto = abs(float(input("Ingrese el monto por favor: \n")))
     cotizacion = convertUSDtoARS(monto)
     print(f"""==> ARS$ {cotizacion:,.2f}""")
 
 
 # elige opcion 1 o 2, si es otra salta error
-opcion = int(input())
+
+while True:
+    try:
+        opcion = int(input())
+        print("Su opcion fue ", opcion,"\n")
+        break 
+    except Exception as e:
+        print("Ingrese un monto valido.")
+        continue
+
+
+# funcion de salida
+
+def exitRestart():
+    while True:
+        opcion = input("Desea seguir el programa ?(y,n)\n").lower()
+        if opcion == "y":
+            print("Ok, dale gas !")
+            return True
+        elif opcion == "n":
+            return False
+        else:
+            print("Opcion incorrecta")
+        continue
+    return 
+
 
 # ejecutar
 
-"""
-creo que hay q hacer una funcion q sea la de masterswapper
-donde ejecuta los swaps
-si falla el input de opcion
-raisea el error y da la chance de elegir devuelta ?
-o capaz no sea exeption sino otro tipo de error mas generico ?
-"""
-
-
 def masterSwapper(opcion):
-    i = True
-    while i == True:
+    while True:
         try:
+
             # swap ARS to USD
             if opcion == 1:
                 swapARStoUSD()
                 time.sleep(1)
-                raise Exception()
+                if exitRestart() == True:
+                    continue
+                else:
+                    break
+
             # swap ARS to USD
             if opcion == 2:
                 swapUSDtoARS()
                 time.sleep(1)
-                raise Exception()
-            else:  # si hay mala eleccion resetea
-                raise Exception()
-        except Exception:
-            print(
-                f"""
-Elija 1 o 2:
+                exitRestart()
+                if exitRestart() == True:
+                    continue
+                else:
+                    break
 
-1. Convertir ARS a USD
-2. Convertir USD a ARS
-"""
-            )
-            opcion = int(input())
-
+        except:
+            exitRestart()
 
 masterSwapper(opcion)
 
 # mensaje de salida
-print("\nMuchas gracias por usar este programa !")
+print("\nMuchas gracias por usar este programa !\n")
