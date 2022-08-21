@@ -15,7 +15,12 @@
 	function convertARStoUSD() {
 		montoCorregido = Math.abs(monto / $USDprice);
 		montoCorregido = montoCorregido.toFixed(2);
-		console.log('el cambio es: ', monto);
+		return montoCorregido;
+	}
+
+	function convertUSDtoARS() {
+		montoCorregido = Math.abs(monto * $USDprice);
+		montoCorregido = montoCorregido.toFixed(2);
 		return montoCorregido;
 	}
 </script>
@@ -57,7 +62,18 @@
 					size="xl"
 					on:click={() => {
 						convertARStoUSD();
-					}}>Cambiar</Button
+					}}>Cambiar Argentinos</Button
+				>
+			</div>
+			<div class="btBuy">
+				<Button
+					shadow="red"
+					gradient
+					color="red"
+					size="xl"
+					on:click={() => {
+						convertUSDtoARS();
+					}}>Cambiar Dólares</Button
 				>
 			</div>
 		</div>
@@ -72,7 +88,7 @@
 	.bigPrice {
 		text-align: center;
 		align-items: center;
-		padding: 150px 150px;
+		padding: 150px 25px;
 	}
 
 	main {
@@ -80,6 +96,6 @@
 		align-content: center;
 	}
 	.btBuy {
-		padding: 55px 150px;
+		padding: 25px 25px;
 	}
 </style>
