@@ -16,7 +16,7 @@
 
 	function convertARStoUSD() {
 		montoCorregido = Math.abs(monto / $USDprice);
-		montoCorregido = montoCorregido.toFixed(2);
+		montoCorregido = Number(montoCorregido.toFixed(2));
 		currency = 'ars$';
 		getRate();
 		//return true;
@@ -24,7 +24,7 @@
 
 	function convertUSDtoARS() {
 		montoCorregido = Math.abs(monto * $USDprice);
-		montoCorregido = montoCorregido.toFixed(2);
+		montoCorregido = Number(montoCorregido.toFixed(2));
 		currency = 'usd$';
 		getRate();
 		//return false;
@@ -38,38 +38,38 @@
 		</div>
 	{:then}
 		<div class="bigPrice">
-			<Card class="text-center" size="sm" padding="sm">
-				<div class="text-2xl text-emerald-800 font-bold">
-					${$USDprice}
-					<p class="text-base">La cotización del momento</p>
-				</div>
-			</Card>
+			<!-- <Card class="text-center" size="sm" padding="sm">
+			</Card> -->
+			<div class="text-2xl text-white text-center font-bold">
+				${$USDprice}
+			</div>
+			<p class="text-white font-thin">La cotización del momento</p>
 
-			<Card class="text-center" size="xl" padding="md">
-				<div class="text-5xl text-emerald-800 font-bold">
-					<p>{montoCorregido}</p>
-					<p class="currency">{currency}</p>
-				</div>
-			</Card>
+			<div class="text-5xl text-white text-center font-bold">
+				<p>{montoCorregido}</p>
+				<p class="currency">{currency}</p>
+			</div>
+			<!-- 			<Card class="text-center" size="xl" padding="md">
+			</Card> -->
 
-			<Card class="text-center" size="md" padding="lg">
-				<input type="number" min="0" bind:value={monto} />
-			</Card>
+			<input type="number" class="inputCard" min="0" bind:value={monto} />
+			<!-- 			<Card class="text-center" size="md" padding="lg">
+			</Card> -->
 		</div>
 		<div class="buttons">
 			<Button
-				shadow="red"
+				shadow="blue"
 				gradient
-				color="blue"
+				color="alternative"
 				size="xl"
 				on:click={() => {
 					convertARStoUSD();
 				}}>Cambiar Argentinos</Button
 			>
 			<Button
-				shadow="red"
+				shadow="green"
 				gradient
-				color="green"
+				color="alternative"
 				size="xl"
 				on:click={() => {
 					convertUSDtoARS();
@@ -81,21 +81,34 @@
 
 <style>
 	body {
-		background-color: orange;
+		background-color: rgb(27, 33, 39);
 		align-self: center;
 		justify-self: center;
+		color: white;
 	}
-
+	.loader {
+		padding-top: 50%;
+		box-shadow: 5cm;
+	}
 	.bigPrice {
+		color: rgb(240, 46, 170);
 		display: grid;
 		padding: 15px 25px;
 		grid-template-columns: repeat(1, 1fr);
 		grid-gap: 15px;
 		justify-items: center;
 	}
-
-	.loader {
-		padding-top: 50%;
+	.currency {
+		font-size: 24pt;
+		color: rgb(240, 46, 170);
+	}
+	.inputCard {
+		text-align: center;
+		font-weight: bold;
+		font-size: 14pt;
+		color: rgb(240, 46, 170);
+		box-shadow: rgba(240, 46, 170, 1) 0px 25px 20px -20px,
+			rgba(240, 46, 170, 1) 0px -15px 20px -20px;
 	}
 	.buttons {
 		padding: 25px 25px;
@@ -103,8 +116,6 @@
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 10px;
 		grid-auto-rows: minmax(75px, auto);
-	}
-	.currency {
-		font-size: 24pt;
+		box-shadow: rgba(240, 46, 170, 0.45) 0px 25px 75px -23px;
 	}
 </style>
