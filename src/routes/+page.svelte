@@ -41,7 +41,7 @@
 			<Card class="text-center" size="sm" padding="sm">
 				<div class="text-2xl text-emerald-800 font-bold">
 					${$USDprice}
-					<p class="text-base">La cotización del día</p>
+					<p class="text-base">La cotización del momento</p>
 				</div>
 			</Card>
 
