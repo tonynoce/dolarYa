@@ -90,6 +90,10 @@ def masterSwapper(opcion):
                     break
 
             # swap ARS to USD
+<<<<<<< HEAD
+=======
+            # por alguna razon esto hace que loopee 2 veces
+>>>>>>> 7861e49 (	new file:   .gitignore)
             if opcion == 2:
                 swapUSDtoARS()
                 time.sleep(1)
