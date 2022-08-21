@@ -31,71 +31,76 @@
 </main>
  -->
 
-<main class="main">
+<body>
 	{#await getRate()}
-		<div class="text-center">
-			<Spinner color="green" size="8" />
+		<div class="text-center loader">
+			<Spinner color="green" size="48" />
 		</div>
 	{:then}
 		<div class="bigPrice">
 			<Card class="text-center" size="sm" padding="sm">
 				<div class="text-2xl text-emerald-800 font-bold">
-					{$USDprice}
+					${$USDprice}
 					<p class="text-base">La cotización del día</p>
 				</div>
 			</Card>
-			<br />
+
 			<Card class="text-center" size="sm" padding="lg">
 				<div class="text-8xl text-emerald-800 font-bold">
-					{montoCorregido}
+					${montoCorregido}
 				</div>
 			</Card>
-			<br />
-			<Card class="text-center" size="lg" padding="lg">
+
+			<Card class="text-center" size="md" padding="lg">
 				<input type="number" min="0" bind:value={monto} />
 			</Card>
-			<div class="btBuy">
-				<Button
-					shadow="green"
-					gradient
-					color="green"
-					size="xl"
-					on:click={() => {
-						convertARStoUSD();
-					}}>Cambiar Argentinos</Button
-				>
-			</div>
-			<div class="btBuy">
-				<Button
-					shadow="red"
-					gradient
-					color="red"
-					size="xl"
-					on:click={() => {
-						convertUSDtoARS();
-					}}>Cambiar Dólares</Button
-				>
-			</div>
+		</div>
+		<div class="buttons">
+			<Button
+				shadow="red"
+				gradient
+				color="blue"
+				size="xl"
+				on:click={() => {
+					convertARStoUSD();
+				}}>Cambiar Argentinos</Button
+			>
+			<Button
+				shadow="red"
+				gradient
+				color="green"
+				size="xl"
+				on:click={() => {
+					convertUSDtoARS();
+				}}>Cambiar Dólares</Button
+			>
 		</div>
 	{/await}
-</main>
+</body>
 
 <style>
-	div {
-		padding: 15px 15px;
+	body {
+		background-color: orange;
+		align-self: center;
+		justify-self: center;
 	}
 
 	.bigPrice {
-		text-align: center;
-		align-items: center;
-		padding: 150px 25px;
+		display: grid;
+		padding: 15px 25px;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 15px;
+		justify-items: center;
 	}
 
-	main {
-		background-color: orange;
-		align-content: center;
+	.loader {
+		padding-top: 50%;
 	}
-	.btBuy {
+	.buttons {
 		padding: 25px 25px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 10px;
+		grid-auto-rows: minmax(75px, auto);
 	}
 </style>
