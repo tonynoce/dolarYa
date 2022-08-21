@@ -12,24 +12,24 @@
 	let monto = 0;
 	let montoCorregido = 0;
 
+	let currency = '';
+
 	function convertARStoUSD() {
 		montoCorregido = Math.abs(monto / $USDprice);
 		montoCorregido = montoCorregido.toFixed(2);
-		return montoCorregido;
+		currency = 'ars$';
+		getRate();
+		//return true;
 	}
 
 	function convertUSDtoARS() {
 		montoCorregido = Math.abs(monto * $USDprice);
 		montoCorregido = montoCorregido.toFixed(2);
-		return montoCorregido;
+		currency = 'usd$';
+		getRate();
+		//return false;
 	}
 </script>
-
-<!-- <main>
-	<h1>Welcome to SvelteKit</h1>
-	<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-</main>
- -->
 
 <body>
 	{#await getRate()}
@@ -46,8 +46,9 @@
 			</Card>
 
 			<Card class="text-center" size="xl" padding="md">
-				<div class="text-8xl text-emerald-800 font-bold">
-					${montoCorregido}
+				<div class="text-5xl text-emerald-800 font-bold">
+					<p>{montoCorregido}</p>
+					<p class="currency">{currency}</p>
 				</div>
 			</Card>
 
@@ -102,5 +103,8 @@
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 10px;
 		grid-auto-rows: minmax(75px, auto);
+	}
+	.currency {
+		font-size: 24pt;
 	}
 </style>
