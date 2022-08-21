@@ -13,7 +13,7 @@
 	let montoCorregido = 0;
 
 	function convertARStoUSD() {
-		montoCorregido = monto / $USDprice;
+		montoCorregido = Math.abs(monto / $USDprice);
 		montoCorregido = montoCorregido.toFixed(2);
 		console.log('el cambio es: ', monto);
 		return montoCorregido;
@@ -31,40 +31,55 @@
 		<div class="text-center">
 			<Spinner color="green" size="8" />
 		</div>
-	{:then}<div class="bigPrice" padding="lg">
+	{:then}
+		<div class="bigPrice">
 			<Card class="text-center" size="sm" padding="sm">
 				<div class="text-2xl text-emerald-800 font-bold">
 					{$USDprice}
+					<p class="text-base">La cotización del día</p>
 				</div>
 			</Card>
+			<br />
 			<Card class="text-center" size="sm" padding="lg">
 				<div class="text-8xl text-emerald-800 font-bold">
 					{montoCorregido}
 				</div>
 			</Card>
+			<br />
 			<Card class="text-center" size="lg" padding="lg">
 				<input type="number" min="0" bind:value={monto} />
 			</Card>
-			<Button
-				shadow="green"
-				gradient
-				color="green"
-				on:click={() => {
-					convertARStoUSD();
-				}}>Cambiar</Button
-			>
+			<div class="btBuy">
+				<Button
+					shadow="green"
+					gradient
+					color="green"
+					size="xl"
+					on:click={() => {
+						convertARStoUSD();
+					}}>Cambiar</Button
+				>
+			</div>
 		</div>
 	{/await}
 </main>
 
 <style>
+	div {
+		padding: 15px 15px;
+	}
+
 	.bigPrice {
 		text-align: center;
 		align-items: center;
 		padding: 150px 150px;
 	}
 
-	.main {
+	main {
 		background-color: orange;
+		align-content: center;
+	}
+	.btBuy {
+		padding: 55px 150px;
 	}
 </style>
