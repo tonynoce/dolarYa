@@ -44,11 +44,12 @@
 				${$USDprice}
 			</div>
 			<p class="text-white font-thin">La cotización del momento</p>
-
-			<div class="text-5xl text-white text-center font-bold">
+			<br />
+			<div class="text-5xl text-white text-center font-bold montoCorregido">
 				<p>{montoCorregido}</p>
 				<p class="currency">{currency}</p>
 			</div>
+			<br />
 			<!-- 			<Card class="text-center" size="xl" padding="md">
 			</Card> -->
 
@@ -117,5 +118,9 @@
 		grid-gap: 10px;
 		grid-auto-rows: minmax(75px, auto);
 		box-shadow: rgba(240, 46, 170, 0.45) 0px 25px 75px -23px;
+	}
+	.montoCorregido {
+		box-shadow: rgba(255, 0, 255, 0.55) 10px 10px 20px 1px,
+			rgba(0, 255, 255, 0.25) -10px -10px 20px 0px;
 	}
 </style>
