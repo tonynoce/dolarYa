@@ -45,7 +45,7 @@
 				</div>
 			</Card>
 
-			<Card class="text-center" size="sm" padding="lg">
+			<Card class="text-center" size="xl" padding="md">
 				<div class="text-8xl text-emerald-800 font-bold">
 					${montoCorregido}
 				</div>
