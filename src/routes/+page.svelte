@@ -37,14 +37,15 @@
 			<Spinner color="green" size="48" />
 		</div>
 	{:then}
+		<div class="text-2xl text-white text-center font-bold">
+			${$USDprice}
+		</div>
+		<br />
+		<p class="text-white font-thin text-center">La cotización del momento, provista por Yadio</p>
+		<br />
 		<div class="bigPrice">
 			<!-- <Card class="text-center" size="sm" padding="sm">
 			</Card> -->
-			<div class="text-2xl text-white text-center font-bold">
-				${$USDprice}
-			</div>
-			<p class="text-white font-thin">La cotización del momento</p>
-			<br />
 			<div class="text-5xl text-white text-center font-bold montoCorregido">
 				<p>{montoCorregido}</p>
 				<p class="currency">{currency}</p>
@@ -86,6 +87,7 @@
 		align-self: center;
 		justify-self: center;
 		color: white;
+		padding-top: 25px;
 	}
 	.loader {
 		padding-top: 50%;
@@ -98,6 +100,7 @@
 		grid-template-columns: repeat(1, 1fr);
 		grid-gap: 15px;
 		justify-items: center;
+		margin: 150px 0px 80px 0px;
 	}
 	.currency {
 		font-size: 24pt;
