@@ -13,6 +13,5 @@ export const getRate = async() => {
     data = await {ARStoUSD : data.USD.ARS}
     data = data.ARStoUSD
     USDprice.set(data.toFixed(2))
-   
     return Number(data).toFixed(2)
   } 
