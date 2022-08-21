@@ -17,7 +17,7 @@
 	function convertARStoUSD() {
 		montoCorregido = Math.abs(monto / $USDprice);
 		montoCorregido = Number(montoCorregido.toFixed(2));
-		currency = 'ars$';
+		currency = 'usd$';
 		getRate();
 		//return true;
 	}
@@ -25,7 +25,7 @@
 	function convertUSDtoARS() {
 		montoCorregido = Math.abs(monto * $USDprice);
 		montoCorregido = Number(montoCorregido.toFixed(2));
-		currency = 'usd$';
+		currency = 'ars$';
 		getRate();
 		//return false;
 	}
