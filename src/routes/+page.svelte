@@ -100,7 +100,7 @@
 		grid-template-columns: repeat(1, 1fr);
 		grid-gap: 15px;
 		justify-items: center;
-		margin: 150px 0px 80px 0px;
+		margin: 120px 0px 80px 0px;
 	}
 	.currency {
 		font-size: 24pt;
