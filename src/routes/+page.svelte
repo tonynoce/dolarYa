@@ -15,19 +15,33 @@
 	let currency = '';
 
 	function convertARStoUSD() {
-		montoCorregido = Math.abs(monto / $USDprice);
-		montoCorregido = Number(montoCorregido.toFixed(2));
-		currency = 'usd$';
-		getRate();
-		//return true;
+		if (monto == 0) {
+		} else {
+			try {
+				montoCorregido = Math.abs(monto / $USDprice);
+				montoCorregido = Number(montoCorregido.toFixed(2));
+				currency = 'usd$';
+				getRate();
+				//return true;
+			} catch (e) {
+				console.log(e);
+			}
+		}
 	}
 
 	function convertUSDtoARS() {
-		montoCorregido = Math.abs(monto * $USDprice);
-		montoCorregido = Number(montoCorregido.toFixed(2));
-		currency = 'ars$';
-		getRate();
-		//return false;
+		if (monto == 0) {
+		} else {
+			try {
+				montoCorregido = Math.abs(monto * $USDprice);
+				montoCorregido = Number(montoCorregido.toFixed(2));
+				currency = 'ars$';
+				getRate();
+				//return false;
+			} catch (e) {
+				console.log(e);
+			}
+		}
 	}
 </script>
 
@@ -78,6 +92,11 @@
 				}}>Cambiar Dólares</Button
 			>
 		</div>
+	{:catch error}
+		<div class="error">
+			<h1>Se produjo el siguiente error:</h1>
+			<p style="font-size:32pt;color: rgb(240, 46, 170)">{error}</p>
+		</div>
 	{/await}
 </body>
 
@@ -96,7 +115,7 @@
 	.bigPrice {
 		color: rgb(240, 46, 170);
 		display: grid;
-		padding: 15px 25px;
+		padding: 15px 20px;
 		grid-template-columns: repeat(1, 1fr);
 		grid-gap: 15px;
 		justify-items: center;
@@ -123,6 +142,13 @@
 		box-shadow: rgba(240, 46, 170, 0.45) 0px 25px 75px -23px;
 	}
 	.montoCorregido {
+		box-shadow: rgba(255, 0, 255, 0.55) 10px 10px 20px 1px,
+			rgba(0, 255, 255, 0.25) -10px -10px 20px 0px;
+	}
+	.error {
+		text-align: center;
+		font-weight: bold;
+		font-size: 24pt;
 		box-shadow: rgba(255, 0, 255, 0.55) 10px 10px 20px 1px,
 			rgba(0, 255, 255, 0.25) -10px -10px 20px 0px;
 	}
