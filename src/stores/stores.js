@@ -13,6 +13,7 @@ const urlARS = "https://api.yadio.io/exrates/ARS"
 export const getRate = async() => {
   let responseUSD = await fetch(urlUSD);
   let dataUSD = await responseUSD.json();
+  
   let responseARS = await fetch(urlARS);
   let dataARS = await responseARS.json();
 
@@ -22,7 +23,8 @@ export const getRate = async() => {
   dataARS = {USDtoARS : dataARS.ARS.USD};
   dataARS = dataARS.USDtoARS;
 
-  USDprice.set(dataUSD.toFixed(2));
-  ARSprice.set(dataARS.toFixed(2));
+  // USDprice.set(dataUSD.toFixed(2));
+  USDprice.set(dataUSD);
+  ARSprice.set(dataARS);
   //return Number(dataUSD).toFixed(2);
 } 

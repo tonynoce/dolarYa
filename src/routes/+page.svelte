@@ -17,13 +17,21 @@
 	function convertARStoUSD() {
 		if (monto == 0) {
 			0;
+		} else if (monto < Number($USDprice)) {
+			try {
+				montoCorregido = Math.abs(monto * $ARSprice);
+				montoCorregido = Number(montoCorregido.toFixed(4));
+				currency = 'usd$';
+				getRate();
+			} catch (e) {
+				console.log(e);
+			}
 		} else {
 			try {
-				montoCorregido = Math.abs(monto / $USDprice);
+				montoCorregido = Math.abs(monto * $ARSprice);
 				montoCorregido = Number(montoCorregido.toFixed(2));
 				currency = 'usd$';
 				getRate();
-				//return true;
 			} catch (e) {
 				console.log(e);
 			}
@@ -39,7 +47,6 @@
 				montoCorregido = Number(montoCorregido.toFixed(2));
 				currency = 'ars$';
 				getRate();
-				//return false;
 			} catch (e) {
 				console.log(e);
 			}
@@ -54,7 +61,8 @@
 		</div>
 	{:then}
 		<div class="text-2xl text-white text-center font-bold">
-			${$USDprice}
+			${$USDprice.toFixed(2)}
+			${$ARSprice}
 		</div>
 		<br />
 		<p class="text-white font-thin text-center">La cotización del momento, provista por Yadio</p>
@@ -132,8 +140,7 @@
 		font-weight: bold;
 		font-size: 14pt;
 		color: rgb(240, 46, 170);
-		box-shadow: rgba(240, 46, 170, 1) 0px 25px 20px -20px,
-			rgba(240, 46, 170, 1) 0px -15px 20px -20px;
+		box-shadow: rgb(240, 46, 170) 0px 25px 20px -20px, rgba(240, 46, 170, 1) 0px -15px 20px -20px;
 	}
 	.buttons {
 		padding: 25px 25px;

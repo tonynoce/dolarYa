@@ -10,7 +10,7 @@
 <body>
 	<h1 class="text-5xl text-white text-center font-bold">ABOUT</h1>
 	<br />
-	<p class="text-align text-center">
+	<p class="text-align text-center ">
 		El precio es fetcheado desde la api de Yadio. <br />
 		Un sitio donde están las cotizaciones del llamado dolar crypto, <br />
 		que suele fluctuar también los fines de semana y/o días feriados.
