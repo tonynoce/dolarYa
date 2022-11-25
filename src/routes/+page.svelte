@@ -5,9 +5,9 @@
 	import { USDprice, ARSprice } from '../stores/stores';
 	import { getRate } from '../stores/stores';
 
-	onMount(() => {
+	/* 	onMount(() => {
 		getRate();
-	});
+	}); */
 
 	let monto = 0;
 	let montoCorregido = 0;
@@ -16,6 +16,7 @@
 
 	function convertARStoUSD() {
 		if (monto == 0) {
+			0;
 		} else {
 			try {
 				montoCorregido = Math.abs(monto / $USDprice);
@@ -31,6 +32,7 @@
 
 	function convertUSDtoARS() {
 		if (monto == 0) {
+			0;
 		} else {
 			try {
 				montoCorregido = Math.abs(monto * $USDprice);
