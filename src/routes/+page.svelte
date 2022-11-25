@@ -19,7 +19,7 @@
 			0;
 		} else if (monto < Number($USDprice)) {
 			try {
-				montoCorregido = Math.abs(monto * $ARSprice);
+				montoCorregido = Math.abs(monto / $USDprice);
 				montoCorregido = Number(montoCorregido.toFixed(4));
 				currency = 'usd$';
 				getRate();
@@ -28,7 +28,7 @@
 			}
 		} else {
 			try {
-				montoCorregido = Math.abs(monto * $ARSprice);
+				montoCorregido = Math.abs(monto / $USDprice);
 				montoCorregido = Number(montoCorregido.toFixed(2));
 				currency = 'usd$';
 				getRate();
@@ -43,7 +43,7 @@
 			0;
 		} else {
 			try {
-				montoCorregido = Math.abs(monto * $USDprice);
+				montoCorregido = Math.abs(monto * ($ARSprice * 1e5));
 				montoCorregido = Number(montoCorregido.toFixed(2));
 				currency = 'ars$';
 				getRate();
@@ -61,8 +61,8 @@
 		</div>
 	{:then}
 		<div class="text-2xl text-white text-center font-bold">
-			Venta ${$USDprice.toFixed(2)} <br />
-			Compra ${($ARSprice * 1e5).toFixed(2)}
+			Compra ${($ARSprice * 1e5).toFixed(2)} <br />
+			Venta ${$USDprice.toFixed(2)}
 		</div>
 		<br />
 		<p class="text-white font-thin text-center">La cotización del momento, provista por Yadio</p>
