@@ -61,8 +61,8 @@
 		</div>
 	{:then}
 		<div class="text-2xl text-white text-center font-bold">
-			${$USDprice.toFixed(2)}
-			${$ARSprice}
+			Compra ${$USDprice.toFixed(2)} <br />
+			Venta ${($ARSprice * 1e5).toFixed(2)}
 		</div>
 		<br />
 		<p class="text-white font-thin text-center">La cotización del momento, provista por Yadio</p>
