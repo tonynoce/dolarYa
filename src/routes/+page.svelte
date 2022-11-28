@@ -80,7 +80,7 @@
 			</Card> -->
 			<!-- 			<Input type="number" size="1" class="inputCard text-center" min="0" bind:value={monto} />
  -->
-			<input type="number" class="inputCard text-center" min="0" bind:value={monto} />
+			<input type="number" class="inputCard text-center font-bold " min="0" bind:value={monto} />
 
 			<!-- 			<Card class="text-center" size="md" padding="lg">
 			</Card> -->
@@ -163,5 +163,17 @@
 		font-size: 24pt;
 		box-shadow: rgba(255, 0, 255, 0.55) 10px 10px 20px 1px,
 			rgba(0, 255, 255, 0.25) -10px -10px 20px 0px;
+	}
+	.label {
+		color: #999;
+		font-size: 18px;
+		font-weight: normal;
+		position: absolute;
+		pointer-events: none;
+		left: 5px;
+		top: 10px;
+		transition: 0.2s ease all;
+		-moz-transition: 0.2s ease all;
+		-webkit-transition: 0.2s ease all;
 	}
 </style>
