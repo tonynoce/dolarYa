@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { Spinner, Card, Button } from 'flowbite-svelte';
+	import { Input } from 'flowbite-svelte';
 
 	import { USDprice, ARSprice } from '../stores/stores';
 	import { getRate } from '../stores/stores';
@@ -77,8 +78,10 @@
 			<br />
 			<!-- 			<Card class="text-center" size="xl" padding="md">
 			</Card> -->
+			<!-- 			<Input type="number" size="1" class="inputCard text-center" min="0" bind:value={monto} />
+ -->
+			<input type="number" class="inputCard text-center" min="0" bind:value={monto} />
 
-			<input type="number" class="inputCard" min="0" bind:value={monto} />
 			<!-- 			<Card class="text-center" size="md" padding="lg">
 			</Card> -->
 		</div>

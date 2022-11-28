@@ -18,7 +18,7 @@
 		"autoprefixer": "^10.4.7",
 		"classnames": "^2.3.1",
 		"flowbite": "^1.5.2",
-		"flowbite-svelte": "^0.25.6",
+		"flowbite-svelte": "^0.25.24",
 		"postcss": "^8.4.14",
 		"postcss-load-config": "^4.0.1",
 		"prettier": "^2.6.2",

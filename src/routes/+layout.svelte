@@ -9,9 +9,11 @@
 
 <slot />
 
-<div class="signature">
-	<p>Hecho con &#128150; por BLOCK33</p>
-</div>
+<footer>
+	<div class="signature">
+		<p>Hecho con &#128150; por BLOCK33</p>
+	</div>
+</footer>
 
 <style>
 	.signature {
