@@ -1,5 +1,6 @@
 <script>
 	import '../app.postcss';
+	import './styles.css';
 </script>
 
 <nav class="text-center">
@@ -18,10 +19,11 @@
 <style>
 	.signature {
 		text-align: center;
+		justify-items: center;
 		position: relative;
-		top: 150px;
+		top: 0;
 		left: 0;
-		right: 0;
+		margin-top: 5%;
 	}
 	.navText {
 		margin: 2em;
