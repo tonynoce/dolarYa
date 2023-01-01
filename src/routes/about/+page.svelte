@@ -7,34 +7,34 @@
 	export let data: PageData; */
 </script>
 
-<body>
-	<h1 class="text-5xl text-white text-center font-bold">ABOUT</h1>
-	<br />
-	<div>
-		<p class="mainText">
+<main>
+	<div class="mainText">
+		<h1 class="text-5xl text-white text-center font-bold">ABOUT</h1>
+		<br />
+		<p>
 			El precio es fetcheado desde la api de Yadio. <br />
-			Un sitio donde están las cotizaciones del llamado dolar crypto, <br />
-			que suele fluctuar también los fines de semana y/o días feriados.
+			Un sitio donde están las cotizaciones del llamado dolar crypto, que suele fluctuar también los
+			fines de semana y/o días feriados.
 		</p>
 		<br />
-		<p class="mainText">
-			Esto le da una ventaja sobre el dolar blue, que posee un volumen menor <br />
-			y no responde a los movimientos hechos por el retail.
+		<p>
+			Esto le da una ventaja sobre el dolar blue, que posee un volumen menor y no responde a los
+			movimientos hechos por el retail.
 		</p>
 	</div>
-</body>
+</main>
 
 <style>
-	body {
+	main {
 		background-color: rgb(27, 33, 39);
-		align-self: center;
-		justify-self: center;
 		color: white;
-		padding-top: 90px;
+		margin-top: 15vh;
 	}
 	.mainText {
-		text-align: justify;
-		margin: 0 auto;
-		width: 30em;
+		display: grid;
+		grid-template-columns: 100%;
+		justify-items: center;
+		grid-column-start: 1;
+		margin: 5vw;
 	}
 </style>

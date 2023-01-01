@@ -8,7 +8,9 @@
 	<a class="text-center font-bold navText" href="/about">ABOUT</a>
 </nav>
 
-<slot />
+<body>
+	<slot />
+</body>
 
 <footer>
 	<div class="signature">
@@ -18,12 +20,13 @@
 
 <style>
 	.signature {
-		text-align: center;
-		justify-items: center;
-		position: relative;
-		top: 0;
+		position: fixed;
 		left: 0;
-		margin-top: 5%;
+		bottom: 0;
+		width: 100%;
+		background-image: linear-gradient(rgba(255, 0, 179, 0.05), rgba(0, 255, 242, 0.062));
+		color: white;
+		text-align: center;
 	}
 	.navText {
 		margin: 2em;

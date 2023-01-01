@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { browser } from '$app/env';
 	import { Spinner, Card, Button } from 'flowbite-svelte';
 	import { Input } from 'flowbite-svelte';
 
@@ -53,13 +54,34 @@
 			}
 		}
 	}
+
+	function addToFavorites() {
+		if (browser) {
+			var title = document.title;
+			var url = document.location;
+			try {
+				window.external.AddFavorite(url, title);
+				AddFavorite(url, title);
+			} catch (e) {}
+			try {
+				window.sidebar.addPanel(title, url, '');
+			} catch (e) {
+				alert(
+					'Su navegador no nos deja agregar a favoritos.\n\nPlease use Ctrl+D to bookmark this page.'
+				);
+			}
+		}
+	}
 </script>
 
-<body>
+<main>
 	{#await getRate()}
-		<div class="text-center loader">
+		<div class="loader">
 			<Spinner color="green" size="48" />
 		</div>
+		<!-- 		<div class="text-center loader">
+			<Spinner color="green" size="48" />
+		</div> -->
 	{:then}
 		<div class="text-2xl text-white text-center font-bold">
 			Compra ${($ARSprice * 1e5).toFixed(2)} <br />
@@ -103,7 +125,17 @@
 			<p style="font-size:32pt;color: rgb(240, 46, 170)">{error}</p>
 		</div>
 	{/await}
-</body>
+	<!-- 
+		<div class="favoritos">
+			<a
+			href="#"
+			on:click={() => {
+				addToFavorites();
+			}}>Add to Favorites</a
+			>
+		</div>
+	-->
+</main>
 
 <style>
 </style>
