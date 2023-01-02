@@ -30,7 +30,7 @@
 	}
 
 	.signature {
-		margin-bottom: 5px;
+		margin-bottom: 7px;
 	}
 
 	.navText {
