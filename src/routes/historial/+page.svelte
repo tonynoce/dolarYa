@@ -36,7 +36,9 @@
 	}
 
 	function cleanStorage() {
-		sessionStorage.clear();
+		//sessionStorage.clear('arstousd');
+		sessionStorage.removeItem('arstousd');
+		sessionStorage.removeItem('usdtoars');
 		getStorage();
 	}
 

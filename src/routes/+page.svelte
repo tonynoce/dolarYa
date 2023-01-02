@@ -20,22 +20,58 @@
 	let currency = '';
 
 	function saveARStoUSD() {
-		monto = monto.toLocaleString('es-AR', {
-			maximumFractionDigits: 2
-		});
-		storeARStoUSD.push([monto, montoCorregido]);
-		sessionStorage.setItem('arstousd', JSON.stringify(storeARStoUSD));
+		storeARStoUSD.push([
+			monto.toLocaleString('es-AR', {
+				maximumFractionDigits: 2
+			}),
+			montoCorregido
+		]);
+
+		let populateStorage: any = [];
+
+		if (sessionStorage.getItem('arstousd') != null) {
+			populateStorage = JSON.parse(sessionStorage.getItem('arstousd'));
+			console.log(populateStorage);
+
+			populateStorage.push([
+				monto.toLocaleString('es-AR', {
+					maximumFractionDigits: 2
+				}),
+				montoCorregido
+			]);
+
+			sessionStorage.setItem('arstousd', JSON.stringify(populateStorage));
+		} else if (sessionStorage.getItem('arstousd') == null) {
+			sessionStorage.setItem('arstousd', JSON.stringify(storeARStoUSD));
+		}
 	}
 
 	function saveUSDtoARS() {
-		monto = monto.toLocaleString('es-AR', {
-			maximumFractionDigits: 2
-		});
-		storeUSDtoARS.push([monto, montoCorregido]);
-		sessionStorage.setItem('usdtoars', JSON.stringify(storeUSDtoARS));
-	}
+		storeUSDtoARS.push([
+			monto.toLocaleString('es-AR', {
+				maximumFractionDigits: 2
+			}),
+			montoCorregido
+		]);
 
-	function addZeros(numberTo: number) {}
+		let populateStorage: any = [];
+
+		if (sessionStorage.getItem('usdtoars') != null) {
+			populateStorage = JSON.parse(sessionStorage.getItem('usdtoars'));
+
+			console.log(populateStorage);
+			populateStorage.push([
+				monto.toLocaleString('es-AR', {
+					maximumFractionDigits: 2
+				}),
+				montoCorregido
+			]);
+
+			sessionStorage.setItem('usdtoars', JSON.stringify(populateStorage));
+		} else if (sessionStorage.getItem('usdtoars') == null) {
+			sessionStorage.setItem('usdtoars', JSON.stringify(storeUSDtoARS));
+		}
+	}
 
 	function convertARStoUSD() {
 		if (monto == 0) {
@@ -50,6 +86,7 @@
 				montoCorregido = montoCorregido.toLocaleString('es-AR', {
 					maximumFractionDigits: 4
 				});
+
 				currency = 'usd$';
 				getRate();
 				saveARStoUSD();
@@ -63,6 +100,7 @@
 				montoCorregido = montoCorregido.toLocaleString('es-AR', {
 					maximumFractionDigits: 2
 				});
+
 				currency = 'usd$';
 				getRate();
 				saveARStoUSD();
@@ -82,6 +120,7 @@
 				montoCorregido = montoCorregido.toLocaleString('es-AR', {
 					maximumFractionDigits: 2
 				});
+
 				currency = 'ars$';
 				getRate();
 				saveUSDtoARS();
@@ -118,6 +157,14 @@
 		}
 	*/
 </script>
+
+<svelte:head>
+	<title>DolarYa</title>
+	<meta
+		name="description"
+		content="Convertidor de divisas entre pesos argentinos y dolares estadounidenses"
+	/>
+</svelte:head>
 
 <main>
 	{#await getRate()}
