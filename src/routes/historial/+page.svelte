@@ -47,7 +47,7 @@
 
 <main>
 	{#if storageARS == null && storageUSD == null}
-		<div class="shinyTitle">
+		<div class="shinyTitle loader">
 			<h1 class="text-4xl text-white  font-bold">Aquí verás tus conversiones</h1>
 		</div>
 	{/if}
@@ -103,8 +103,6 @@
 	}
 
 	.shinyTitle {
-		position: absolute;
-		top: 50vh;
 		text-align: center;
 		animation-name: changecolor;
 		animation-duration: 2.5s;
