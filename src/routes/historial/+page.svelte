@@ -47,7 +47,9 @@
 
 <main>
 	{#if storageARS == null && storageUSD == null}
-		<h1 class="text-2xl text-white text-center font-bold">Aquí verás tus conversiones</h1>
+		<div class="shinyTitle">
+			<h1 class="text-4xl text-white  font-bold">Aquí verás tus conversiones</h1>
+		</div>
 	{/if}
 	<div class="listWrapper">
 		{#if storageARS != null || storageUSD != null}
@@ -98,5 +100,25 @@
 
 	.buttonWrapper {
 		margin: 0 0 25px 0;
+	}
+
+	.shinyTitle {
+		position: absolute;
+		top: 50vh;
+		text-align: center;
+		animation-name: changecolor;
+		animation-duration: 2.5s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		animation-timing-function: ease-in-out;
+	}
+
+	@keyframes changecolor {
+		from {
+			text-shadow: rgb(240, 46, 170) 0px 5px 20px;
+		}
+		to {
+			text-shadow: rgb(46, 201, 240) 0px -5px 10px;
+		}
 	}
 </style>

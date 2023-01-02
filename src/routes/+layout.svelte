@@ -24,6 +24,7 @@
 		display: grid;
 		grid-template-columns: repeat(3, auto);
 	}
+
 	.footer {
 		position: fixed;
 		left: 0;

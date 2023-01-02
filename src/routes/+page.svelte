@@ -121,8 +121,6 @@
 		<p class="text-white font-thin text-center">La cotización del momento, provista por Yadio</p>
 
 		<div class="bigPrice">
-			<!-- <Card class="text-center" size="sm" padding="sm">
-			</Card> -->
 			<div class="text-5xl text-white text-center font-bold montoCorregido">
 				<p>{montoCorregido}</p>
 				<p class="currency">{currency}</p>
@@ -166,6 +164,3 @@
 		</div>
 	-->
 </main>
-
-<style>
-</style>
