@@ -94,7 +94,7 @@
 
 	.listWrapper {
 		display: grid;
-		grid-template-columns: 100vw;
+		grid-template-columns: 100%;
 		justify-items: center;
 	}
 
