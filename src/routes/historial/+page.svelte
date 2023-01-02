@@ -73,6 +73,17 @@
 		{/if}
 		<br />
 		{#if storageUSD != null}
+			<div class="buttonWrapper">
+				<Button
+					shadow="blue"
+					gradient
+					color="alternative"
+					size="xl"
+					on:click={() => {
+						cleanStorage();
+					}}>Borrar historial</Button
+				>
+			</div>
 			<h1 class="text-2xl text-white text-center font-bold">USD convertido a ARS</h1>
 			{#each storageUSD as monto, i}
 				<li>
