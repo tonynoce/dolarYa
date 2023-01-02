@@ -50,7 +50,7 @@
 		<h1 class="text-2xl text-white text-center font-bold">Aquí verás tus conversiones</h1>
 	{/if}
 	<div class="listWrapper">
-		{#if storageARS != null}
+		{#if storageARS != null || storageUSD != null}
 			<div class="buttonWrapper">
 				<Button
 					shadow="blue"
@@ -62,6 +62,8 @@
 					}}>Borrar historial</Button
 				>
 			</div>
+		{/if}
+		{#if storageARS != null}
 			<!-- ARS storage -->
 			<h1 class="text-2xl text-white text-center font-bold">ARS convertido a USD</h1>
 			{#each storageARS as monto, i}
@@ -73,17 +75,6 @@
 		{/if}
 		<br />
 		{#if storageUSD != null}
-			<div class="buttonWrapper">
-				<Button
-					shadow="blue"
-					gradient
-					color="alternative"
-					size="xl"
-					on:click={() => {
-						cleanStorage();
-					}}>Borrar historial</Button
-				>
-			</div>
 			<h1 class="text-2xl text-white text-center font-bold">USD convertido a ARS</h1>
 			{#each storageUSD as monto, i}
 				<li>
