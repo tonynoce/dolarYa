@@ -34,6 +34,7 @@
 		animation-iteration-count: infinite;
 		animation-direction: alternate;
 		animation-timing-function: ease-in-out;
+		margin-bottom: 15px;
 	}
 
 	@keyframes shadow {
@@ -56,7 +57,7 @@
 		grid-template-columns: 100%;
 		justify-items: center;
 		grid-column-start: 1;
-		margin: 5vw;
+		margin: 0 5vw 0 5vw;
 	}
 
 	h1 {

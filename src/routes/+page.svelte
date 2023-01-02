@@ -11,8 +11,8 @@
 		getRate();
 	}); */
 
-	let monto = 0;
-	let montoCorregido = 0;
+	let monto: any = 0;
+	let montoCorregido: any = 0;
 
 	let storeARStoUSD: any = [];
 	let storeUSDtoARS: any = [];
@@ -20,25 +20,36 @@
 	let currency = '';
 
 	function saveARStoUSD() {
+		monto = monto.toLocaleString('es-AR', {
+			maximumFractionDigits: 2
+		});
 		storeARStoUSD.push([monto, montoCorregido]);
 		sessionStorage.setItem('arstousd', JSON.stringify(storeARStoUSD));
 	}
 
 	function saveUSDtoARS() {
+		monto = monto.toLocaleString('es-AR', {
+			maximumFractionDigits: 2
+		});
 		storeUSDtoARS.push([monto, montoCorregido]);
 		sessionStorage.setItem('usdtoars', JSON.stringify(storeUSDtoARS));
 	}
 
+	function addZeros(numberTo: number) {}
+
 	function convertARStoUSD() {
 		if (monto == 0) {
 			0;
-		} else if (monto < Number($USDprice)) {
 			/**
 			 * @dev this is because argentinian peso has many zeros in front, sight !
 			 */
+		} else if (monto < Number($USDprice)) {
 			try {
 				montoCorregido = Math.abs(monto / $USDprice);
-				montoCorregido = Number(montoCorregido.toFixed(4));
+				//montoCorregido = Number(montoCorregido.toFixed(4));
+				montoCorregido = montoCorregido.toLocaleString('es-AR', {
+					maximumFractionDigits: 4
+				});
 				currency = 'usd$';
 				getRate();
 				saveARStoUSD();
@@ -48,7 +59,10 @@
 		} else {
 			try {
 				montoCorregido = Math.abs(monto / $USDprice);
-				montoCorregido = Number(montoCorregido.toFixed(2));
+				//montoCorregido = Number(montoCorregido.toFixed(2));
+				montoCorregido = montoCorregido.toLocaleString('es-AR', {
+					maximumFractionDigits: 2
+				});
 				currency = 'usd$';
 				getRate();
 				saveARStoUSD();
@@ -64,7 +78,10 @@
 		} else {
 			try {
 				montoCorregido = Math.abs(monto * ($ARSprice * 1e5));
-				montoCorregido = Number(montoCorregido.toFixed(2));
+				//montoCorregido = Number(montoCorregido.toFixed(2));
+				montoCorregido = montoCorregido.toLocaleString('es-AR', {
+					maximumFractionDigits: 2
+				});
 				currency = 'ars$';
 				getRate();
 				saveUSDtoARS();
@@ -102,24 +119,28 @@
 	*/
 </script>
 
-{storeARStoUSD}
-{storeUSDtoARS}
 <main>
 	{#await getRate()}
 		<div class="loader">
 			<Spinner color="green" size="48" />
 		</div>
-		<!-- 		<div class="text-center loader">
-			<Spinner color="green" size="48" />
-		</div> -->
 	{:then}
+		<!-- Top prices -->
 		<div class="text-2xl text-white text-center font-bold">
-			Compra ${($ARSprice * 1e5).toFixed(2)} <br />
-			Venta ${$USDprice.toFixed(2)}
+			Compra ${($ARSprice * 1e5).toLocaleString('es-AR', {
+				minimumFractionDigits: 2,
+				maximumFractionDigits: 2
+			})}
+			<br />
+			Venta ${$USDprice.toLocaleString('es-AR', {
+				minimumFractionDigits: 2,
+				maximumFractionDigits: 2
+			})}
 		</div>
 		<br />
 		<p class="text-white font-thin text-center">La cotización del momento, provista por Yadio</p>
 
+		<!-- Big price -->
 		<div class="bigPrice">
 			<div class="text-5xl text-white text-center font-bold montoCorregido">
 				<p>{montoCorregido}</p>
@@ -127,6 +148,7 @@
 			</div>
 			<input type="number" class="inputCard text-center font-bold " min="0" bind:value={monto} />
 		</div>
+		<!-- Buy and sell buttons -->
 		<div class="buttons">
 			<Button
 				shadow="blue"
