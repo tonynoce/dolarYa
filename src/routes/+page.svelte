@@ -14,17 +14,34 @@
 	let monto = 0;
 	let montoCorregido = 0;
 
+	let storeARStoUSD: any = [];
+	let storeUSDtoARS: any = [];
+
 	let currency = '';
+
+	function saveARStoUSD() {
+		storeARStoUSD.push([monto, montoCorregido]);
+		sessionStorage.setItem('arstousd', JSON.stringify(storeARStoUSD));
+	}
+
+	function saveUSDtoARS() {
+		storeUSDtoARS.push([monto, montoCorregido]);
+		sessionStorage.setItem('usdtoars', JSON.stringify(storeUSDtoARS));
+	}
 
 	function convertARStoUSD() {
 		if (monto == 0) {
 			0;
 		} else if (monto < Number($USDprice)) {
+			/**
+			 * @dev this is because argentinian peso has many zeros in front, sight !
+			 */
 			try {
 				montoCorregido = Math.abs(monto / $USDprice);
 				montoCorregido = Number(montoCorregido.toFixed(4));
 				currency = 'usd$';
 				getRate();
+				saveARStoUSD();
 			} catch (e) {
 				console.log(e);
 			}
@@ -34,6 +51,7 @@
 				montoCorregido = Number(montoCorregido.toFixed(2));
 				currency = 'usd$';
 				getRate();
+				saveARStoUSD();
 			} catch (e) {
 				console.log(e);
 			}
@@ -49,12 +67,21 @@
 				montoCorregido = Number(montoCorregido.toFixed(2));
 				currency = 'ars$';
 				getRate();
+				saveUSDtoARS();
 			} catch (e) {
 				console.log(e);
 			}
 		}
 	}
 
+	/*
+	onMount(() => {
+		sessionStorage.setItem('arstousd', '');
+		sessionStorage.setItem('usdtoars', '');
+	});
+	*/
+
+	/*
 	function addToFavorites() {
 		if (browser) {
 			var title = document.title;
@@ -68,12 +95,15 @@
 			} catch (e) {
 				alert(
 					'Su navegador no nos deja agregar a favoritos.\n\nPlease use Ctrl+D to bookmark this page.'
-				);
+					);
+				}
 			}
 		}
-	}
+	*/
 </script>
 
+{storeARStoUSD}
+{storeUSDtoARS}
 <main>
 	{#await getRate()}
 		<div class="loader">

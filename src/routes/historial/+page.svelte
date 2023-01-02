@@ -1,0 +1,94 @@
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { Button } from 'flowbite-svelte';
+
+	/* 
+	import type { PageData } from './$types';
+	
+	export let data: PageData;
+	*/
+	let storageARS: any = [];
+	let storageUSD: any = [];
+	let storageCleaned = false;
+
+	$: storageARS;
+	$: storageUSD;
+
+	function getStorage() {
+		if (storageARS != null) {
+			try {
+				if (storageARS.lenght != 0) {
+					storageARS = JSON.parse(sessionStorage.getItem('arstousd'));
+				}
+			} catch (e) {
+				console.log(e);
+			}
+		}
+		if (storageUSD != null) {
+			try {
+				if (storageUSD.lenght != 0) {
+					storageUSD = JSON.parse(sessionStorage.getItem('usdtoars'));
+				}
+			} catch (e) {
+				console.log(e);
+			}
+		}
+	}
+
+	function cleanStorage() {
+		sessionStorage.clear();
+		getStorage();
+	}
+
+	onMount(() => {
+		getStorage();
+	});
+</script>
+
+<main>
+	{#if storageARS == null || storageUSD == null}
+		<h1 class="text-2xl text-white text-center font-bold">Aquí verás tus conversiones</h1>
+	{/if}
+	<div class="listWrapper">
+		{#if storageARS != null}
+			<Button
+				shadow="blue"
+				gradient
+				color="alternative"
+				size="xl"
+				on:click={() => {
+					cleanStorage();
+				}}>Borrar historial</Button
+			>
+			<!-- ARS storage -->
+			<h1 class="text-2xl text-white text-center font-bold">ARS convertido a USD</h1>
+			{#each storageARS as monto, i}
+				<li>
+					{i + 1} = ARS{monto[0]} => USD{monto[1]}
+				</li>
+			{/each}
+			<!-- USD storage -->
+		{/if}
+		<br />
+		{#if storageUSD != null}
+			<h1 class="text-2xl text-white text-center font-bold">USD convertido a ARS</h1>
+			{#each storageUSD as monto, i}
+				<li>
+					{i + 1} = USD{monto[0]} => ARS{monto[1]}
+				</li>
+			{/each}
+		{/if}
+	</div>
+</main>
+
+<style>
+	li {
+		list-style: none;
+	}
+
+	.listWrapper {
+		display: grid;
+		grid-template-columns: 100vw;
+		justify-items: center;
+	}
+</style>

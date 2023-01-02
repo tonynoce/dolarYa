@@ -28,7 +28,7 @@
 	main {
 		background-color: rgb(27, 33, 39);
 		color: white;
-		margin-top: 15vh;
+		margin-top: 5vh;
 	}
 	.mainText {
 		display: grid;

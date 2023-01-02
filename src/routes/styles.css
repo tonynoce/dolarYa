@@ -46,7 +46,7 @@ body {
 
 .buttons:hover {
     /* border-radius: 10%; */
-    box-shadow: rgba(235, 23, 157, 0.644) 0px 25px 125px -23px;
+    /* box-shadow: rgba(235, 23, 157, 0.644) 0px 25px 125px -23px; */
 }
 .montoCorregido {
     box-shadow: rgba(255, 0, 255, 0.55) 10px 10px 20px 1px,
