@@ -46,25 +46,27 @@
 </script>
 
 <main>
-	{#if storageARS == null || storageUSD == null}
+	{#if storageARS == null && storageUSD == null}
 		<h1 class="text-2xl text-white text-center font-bold">Aquí verás tus conversiones</h1>
 	{/if}
 	<div class="listWrapper">
 		{#if storageARS != null}
-			<Button
-				shadow="blue"
-				gradient
-				color="alternative"
-				size="xl"
-				on:click={() => {
-					cleanStorage();
-				}}>Borrar historial</Button
-			>
+			<div class="buttonWrapper">
+				<Button
+					shadow="blue"
+					gradient
+					color="alternative"
+					size="xl"
+					on:click={() => {
+						cleanStorage();
+					}}>Borrar historial</Button
+				>
+			</div>
 			<!-- ARS storage -->
 			<h1 class="text-2xl text-white text-center font-bold">ARS convertido a USD</h1>
 			{#each storageARS as monto, i}
 				<li>
-					{i + 1} = ARS{monto[0]} => USD{monto[1]}
+					{i + 1} = ars${monto[0]} => usd${monto[1]}
 				</li>
 			{/each}
 			<!-- USD storage -->
@@ -74,7 +76,7 @@
 			<h1 class="text-2xl text-white text-center font-bold">USD convertido a ARS</h1>
 			{#each storageUSD as monto, i}
 				<li>
-					{i + 1} = USD{monto[0]} => ARS{monto[1]}
+					{i + 1} = usd${monto[0]} => ars${monto[1]}
 				</li>
 			{/each}
 		{/if}
@@ -90,5 +92,9 @@
 		display: grid;
 		grid-template-columns: 100vw;
 		justify-items: center;
+	}
+
+	.buttonWrapper {
+		margin: 0 0 25px 0;
 	}
 </style>
