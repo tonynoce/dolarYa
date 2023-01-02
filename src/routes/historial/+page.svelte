@@ -70,26 +70,49 @@
 		{#if storageARS != null}
 			<!-- ARS storage -->
 			<h1 class="text-2xl text-white text-center font-bold">ARS convertido a USD</h1>
-			{#each storageARS as monto, i}
-				<li>
+			<div class="exchangeWrapper">
+				{#each storageARS as monto, i}
+					<!-- 				<li>
 					{i + 1} = ars${monto[0]} => usd${monto[1]}
-				</li>
-			{/each}
+				</li> -->
+					<p>
+						{i + 1}
+					</p>
+					<p>
+						ars${monto[0]}
+					</p>
+					<p>
+						usd${monto[1]}
+					</p>
+				{/each}
+			</div>
+
 			<!-- USD storage -->
 		{/if}
 		<br />
 		{#if storageUSD != null}
 			<h1 class="text-2xl text-white text-center font-bold">USD convertido a ARS</h1>
-			{#each storageUSD as monto, i}
-				<li>
-					{i + 1} = usd${monto[0]} => ars${monto[1]}
-				</li>
-			{/each}
+			<div class="exchangeWrapper">
+				{#each storageUSD as monto, i}
+					<p>
+						{i + 1}
+					</p>
+					<p>
+						usd${monto[0]}
+					</p>
+					<p>
+						ars${monto[1]}
+					</p>
+				{/each}
+			</div>
 		{/if}
 	</div>
 </main>
 
 <style>
+	main {
+		margin-bottom: 18pt;
+	}
 	li {
 		list-style: none;
 	}
@@ -102,6 +125,12 @@
 
 	.buttonWrapper {
 		margin: 0 0 25px 0;
+	}
+
+	.exchangeWrapper {
+		display: grid;
+		grid-template-columns: 1fr 2fr 2fr;
+		width: 80%;
 	}
 
 	.shinyTitle {
