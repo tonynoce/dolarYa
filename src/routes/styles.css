@@ -3,6 +3,7 @@ body {
     color: white;
     padding-top: 25px;
 }
+
 .loader {
     position: absolute;
     top: 50%;
@@ -12,7 +13,7 @@ body {
 .bigPrice {
     color: rgb(240, 46, 170);
     display: grid;
-    padding: 15px 20px;
+/*     padding: 15px 20px; */
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 15px;
     justify-items: center;
@@ -44,6 +45,7 @@ body {
 }
 
 .buttons:hover {
+    /* border-radius: 10%; */
     box-shadow: rgba(235, 23, 157, 0.644) 0px 25px 125px -23px;
 }
 .montoCorregido {

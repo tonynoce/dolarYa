@@ -13,13 +13,13 @@
 </body>
 
 <footer>
-	<div class="signature">
-		<p>Hecho con &#128150; por BLOCK33</p>
+	<div class="footer">
+		<p class="signature">Hecho con &#128150; por BLOCK33</p>
 	</div>
 </footer>
 
 <style>
-	.signature {
+	.footer {
 		position: fixed;
 		left: 0;
 		bottom: 0;
@@ -28,6 +28,11 @@
 		color: white;
 		text-align: center;
 	}
+
+	.signature {
+		margin-bottom: 5px;
+	}
+
 	.navText {
 		margin: 2em;
 	}
