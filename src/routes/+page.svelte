@@ -29,8 +29,8 @@
 
 		let populateStorage: any = [];
 
-		if (sessionStorage.getItem('arstousd') != null) {
-			populateStorage = JSON.parse(sessionStorage.getItem('arstousd'));
+		if (localStorage.getItem('arstousd') != null) {
+			populateStorage = JSON.parse(localStorage.getItem('arstousd'));
 			console.log(populateStorage);
 
 			populateStorage.push([
@@ -40,9 +40,9 @@
 				montoCorregido
 			]);
 
-			sessionStorage.setItem('arstousd', JSON.stringify(populateStorage));
-		} else if (sessionStorage.getItem('arstousd') == null) {
-			sessionStorage.setItem('arstousd', JSON.stringify(storeARStoUSD));
+			localStorage.setItem('arstousd', JSON.stringify(populateStorage));
+		} else if (localStorage.getItem('arstousd') == null) {
+			localStorage.setItem('arstousd', JSON.stringify(storeARStoUSD));
 		}
 	}
 
@@ -56,8 +56,8 @@
 
 		let populateStorage: any = [];
 
-		if (sessionStorage.getItem('usdtoars') != null) {
-			populateStorage = JSON.parse(sessionStorage.getItem('usdtoars'));
+		if (localStorage.getItem('usdtoars') != null) {
+			populateStorage = JSON.parse(localStorage.getItem('usdtoars'));
 
 			console.log(populateStorage);
 			populateStorage.push([
@@ -67,9 +67,9 @@
 				montoCorregido
 			]);
 
-			sessionStorage.setItem('usdtoars', JSON.stringify(populateStorage));
-		} else if (sessionStorage.getItem('usdtoars') == null) {
-			sessionStorage.setItem('usdtoars', JSON.stringify(storeUSDtoARS));
+			localStorage.setItem('usdtoars', JSON.stringify(populateStorage));
+		} else if (localStorage.getItem('usdtoars') == null) {
+			localStorage.setItem('usdtoars', JSON.stringify(storeUSDtoARS));
 		}
 	}
 
@@ -132,8 +132,8 @@
 
 	/*
 	onMount(() => {
-		sessionStorage.setItem('arstousd', '');
-		sessionStorage.setItem('usdtoars', '');
+		localStorage.setItem('arstousd', '');
+		localStorage.setItem('usdtoars', '');
 	});
 	*/
 

@@ -18,7 +18,7 @@
 		if (storageARS != null) {
 			try {
 				if (storageARS.lenght != 0) {
-					storageARS = JSON.parse(sessionStorage.getItem('arstousd'));
+					storageARS = JSON.parse(localStorage.getItem('arstousd'));
 				}
 			} catch (e) {
 				console.log(e);
@@ -27,7 +27,7 @@
 		if (storageUSD != null) {
 			try {
 				if (storageUSD.lenght != 0) {
-					storageUSD = JSON.parse(sessionStorage.getItem('usdtoars'));
+					storageUSD = JSON.parse(localStorage.getItem('usdtoars'));
 				}
 			} catch (e) {
 				console.log(e);
@@ -36,9 +36,9 @@
 	}
 
 	function cleanStorage() {
-		//sessionStorage.clear('arstousd');
-		sessionStorage.removeItem('arstousd');
-		sessionStorage.removeItem('usdtoars');
+		//localStorage.clear('arstousd');
+		localStorage.removeItem('arstousd');
+		localStorage.removeItem('usdtoars');
 		getStorage();
 	}
 
