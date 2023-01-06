@@ -7,15 +7,20 @@ export let ARSprice = writable()
 const urlUSD = "https://api.yadio.io/exrates/USD"
 const urlARS = "https://api.yadio.io/exrates/ARS"
 
+export let dataARS;
+export let dataUSD;
+
+
 /**
- * @dev this function gets the rate of just the usd
+ * @dev this function gets the rate
+ * it also writes is to the local storage
  */
 export const getRate = async() => {
   let responseUSD = await fetch(urlUSD);
-  let dataUSD = await responseUSD.json();
+  dataUSD = await responseUSD.json();
   
   let responseARS = await fetch(urlARS);
-  let dataARS = await responseARS.json();
+  dataARS = await responseARS.json();
 
   dataUSD = {ARStoUSD : dataUSD.USD.ARS};
   dataUSD = dataUSD.ARStoUSD;
@@ -27,4 +32,9 @@ export const getRate = async() => {
   USDprice.set(dataUSD);
   ARSprice.set(dataARS);
   //return Number(dataUSD).toFixed(2);
+
+  // write to local storage:
+/*   localStorage.setItem('USDprice', dataARS);
+  localStorage.setItem('ARSprice', dataUSD);
+  localStorage.setItem('Date', String(Date.now())); */
 } 

@@ -58,7 +58,7 @@ body {
 .error {
     text-align: center;
     font-weight: bold;
-    font-size: 24pt;
+    font-size: 16pt;
     box-shadow: rgba(255, 0, 255, 0.55) 10px 10px 20px 1px,
         rgba(0, 255, 255, 0.25) -10px -10px 20px 0px;
 }
