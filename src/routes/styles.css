@@ -8,7 +8,7 @@ body {
 }
 
 .loader {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -54,6 +54,7 @@ body {
 .montoCorregido {
     box-shadow: rgba(255, 0, 255, 0.55) 10px 10px 20px 1px,
         rgba(0, 255, 255, 0.25) -10px -10px 20px 0px;
+        
 }
 .error {
     text-align: center;

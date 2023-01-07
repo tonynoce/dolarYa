@@ -143,11 +143,13 @@
 	}
 
 	@keyframes changecolor {
-		from {
+		0% {
 			text-shadow: rgb(240, 46, 170) 0px 5px 20px;
+			translate: 0 -20px;
 		}
-		to {
+		100% {
 			text-shadow: rgb(46, 201, 240) 0px -5px 10px;
+			translate: 0 30px;
 		}
 	}
 </style>

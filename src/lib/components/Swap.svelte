@@ -27,7 +27,7 @@
 
 		if (localStorage.getItem('arstousd') != null) {
 			populateStorage = JSON.parse(localStorage.getItem('arstousd'));
-			console.log(populateStorage);
+			//console.log(populateStorage);
 
 			populateStorage.push([
 				monto.toLocaleString('es-AR', {
@@ -55,7 +55,7 @@
 		if (localStorage.getItem('usdtoars') != null) {
 			populateStorage = JSON.parse(localStorage.getItem('usdtoars'));
 
-			console.log(populateStorage);
+			//console.log(populateStorage);
 			populateStorage.push([
 				monto.toLocaleString('es-AR', {
 					maximumFractionDigits: 2

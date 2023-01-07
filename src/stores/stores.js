@@ -18,12 +18,12 @@ export let dataUSD;
 export const getRate = async() => {
   let responseUSD = await fetch(urlUSD);
   dataUSD = await responseUSD.json();
-  
-  let responseARS = await fetch(urlARS);
-  dataARS = await responseARS.json();
 
   dataUSD = {ARStoUSD : dataUSD.USD.ARS};
   dataUSD = dataUSD.ARStoUSD;
+  
+  let responseARS = await fetch(urlARS);
+  dataARS = await responseARS.json();
   
   dataARS = {USDtoARS : dataARS.ARS.USD};
   dataARS = dataARS.USDtoARS;
