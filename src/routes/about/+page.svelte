@@ -10,7 +10,13 @@
 <main>
 	<div class="mainText">
 		<h1 class="text-5xl text-white text-center font-bold">ABOUT</h1>
-		<img src="DolarYaIcon.png" alt="Dollar ya" />
+		<!-- <img src="DolarYaIcon.png" alt="Dollar ya" /> -->
+		<div class="pictureWrapper">
+			<picture>
+				<source type="image/webp" srcset="DolarYaIcon.webp" />
+				<img src="DolarYaIcon.png" alt="Picture of a dolar coin made by an AI" />
+			</picture>
+		</div>
 		<br />
 		<p>
 			El precio es fetcheado desde la api de Yadio. <br />
@@ -25,7 +31,7 @@
 </main>
 
 <style>
-	img {
+	.pictureWrapper {
 		width: 50%;
 		max-width: 200px;
 		border-radius: 100%;
