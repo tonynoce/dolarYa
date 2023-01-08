@@ -15,6 +15,18 @@
 	export let offline: boolean;
 	export let theDate: Date;
 
+	$: offline;
+
+	function vibrateARS() {
+		navigator.vibrate([100, 30, 100]);
+		/* console.log('brrArs'); */
+	}
+
+	function vibrateUSD() {
+		navigator.vibrate([200, 30, 200, 30, 200]);
+		/* console.log('brrUsd'); */
+	}
+
 	function saveARStoUSD() {
 		storeARStoUSD.push([
 			monto.toLocaleString('es-AR', {
@@ -85,6 +97,7 @@
 				currency = 'usd$';
 				getRate();
 				saveARStoUSD();
+				vibrateARS();
 			} catch (e) {
 				console.log(e);
 			}
@@ -99,6 +112,7 @@
 				currency = 'usd$';
 				getRate();
 				saveARStoUSD();
+				vibrateARS();
 			} catch (e) {
 				console.log(e);
 			}
@@ -119,6 +133,7 @@
 				currency = 'ars$';
 				getRate();
 				saveUSDtoARS();
+				vibrateUSD();
 			} catch (e) {
 				console.log(e);
 			}
@@ -139,9 +154,10 @@
 	})}
 </div>
 <br />
+
 {#if offline == true}
 	<div class="text-center">
-		<p>Último precio de la cotización:</p>
+		<h1 class="text-1xl font-bold">Último precio de la cotización:</h1>
 		<p class="text-white font-thin text-center">{theDate.toLocaleString()}</p>
 	</div>
 {:else}
