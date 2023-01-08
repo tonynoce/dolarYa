@@ -113,9 +113,6 @@
 	main {
 		margin-bottom: 18pt;
 	}
-	li {
-		list-style: none;
-	}
 
 	.listWrapper {
 		display: grid;

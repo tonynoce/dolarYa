@@ -1,0 +1,25 @@
+{
+	"short-name": "DolarYa",
+	"name": "DolarYa",
+	"start_url": "/",
+	"icons": [
+        {
+			"src": "favicon.png",
+			"type": "image/png",
+			"sizes": "128x128"
+		},
+		{
+			"src": "DolarYaIcon_144px.png",
+			"type": "image/png",
+			"sizes": "144x144"
+		},
+		{
+			"src": "DolarYaIcon.png",
+			"type": "image/png",
+			"sizes": "458x446"
+		}
+	],
+	"display": "standalone",
+	"scope": "/",
+	"description": "Conversor de divisas argentinas a estadounidenses"
+}

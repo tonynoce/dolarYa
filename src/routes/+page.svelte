@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+
 	import { browser } from '$app/env';
 	import { Spinner, Card, Button } from 'flowbite-svelte';
 	import { Input } from 'flowbite-svelte';
@@ -53,6 +54,7 @@
 
 <svelte:head>
 	<title>DolarYa</title>
+	<link rel="manifest" href="/manifest.json" />
 	<meta
 		name="description"
 		content="Convertidor de divisas entre pesos argentinos y dolares estadounidenses"
