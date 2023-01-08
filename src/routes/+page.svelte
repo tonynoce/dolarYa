@@ -55,7 +55,7 @@
 </script>
 
 <svelte:head>
-	<title>DolarYa => ${($ARSprice * 1e5).toFixed(2)} -- ${$USDprice.toFixed(2)}</title>
+	<title>DolarYa</title>
 	<link rel="manifest" href="/manifest.json" />
 	<meta
 		name="description"
