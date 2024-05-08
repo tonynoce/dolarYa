@@ -124,7 +124,7 @@
 			0;
 		} else {
 			try {
-				montoCorregido = Math.abs(monto * ($ARSprice * 1e5));
+				montoCorregido = Math.abs(monto * $ARSprice);
 				//montoCorregido = Number(montoCorregido.toFixed(2));
 				montoCorregido = montoCorregido.toLocaleString('es-AR', {
 					maximumFractionDigits: 2
