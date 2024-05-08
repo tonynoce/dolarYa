@@ -6,6 +6,7 @@ export let ARSprice = writable()
 
 const urlUSD = "https://api.yadio.io/exrates/USD"
 const urlARS = "https://api.yadio.io/exrates/ARS"
+const dolarApi = "https://dolarapi.com/v1/dolares/cripto"
 
 export let dataARS;
 export let dataUSD;
@@ -16,17 +17,22 @@ export let dataUSD;
  * it also writes is to the local storage
  */
 export const getRate = async() => {
-  let responseUSD = await fetch(urlUSD);
-  dataUSD = await responseUSD.json();
+  //let responseUSD = await fetch(urlUSD);
+  let responseUSD = await fetch(dolarApi);
+  //dataUSD = await responseUSD.json();
+  let responseJSON = await responseUSD.json();
 
-  dataUSD = {ARStoUSD : dataUSD.USD.ARS};
-  dataUSD = dataUSD.ARStoUSD;
+  //dataUSD = {ARStoUSD : dataUSD.USD.ARS};
+  //dataUSD = dataUSD.ARStoUSD;
+  dataUSD = responseJSON.compra;
   
-  let responseARS = await fetch(urlARS);
-  dataARS = await responseARS.json();
+  //let responseARS = await fetch(urlARS);
+  //dataARS = await responseARS.json();
+  //dataARS = await responseARS.json();
   
-  dataARS = {USDtoARS : dataARS.ARS.USD};
-  dataARS = dataARS.USDtoARS;
+  //dataARS = {USDtoARS : dataARS.ARS.USD};
+  //dataARS = dataARS.USDtoARS;
+  dataARS = responseJSON.venta;
 
   // USDprice.set(dataUSD.toFixed(2));
   USDprice.set(dataUSD);
