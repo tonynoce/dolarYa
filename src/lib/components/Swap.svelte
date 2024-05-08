@@ -161,7 +161,9 @@
 		<p class="text-white font-thin text-center">{theDate.toLocaleString()}</p>
 	</div>
 {:else}
-	<p class="text-white font-thin text-center">La cotización del momento, provista por Yadio</p>
+	<p class="text-white font-thin text-center">
+		La cotización del momento del dolar cripto, provista por la api de DolarHoy.
+	</p>
 {/if}
 
 <!-- Big price -->
