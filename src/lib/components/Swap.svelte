@@ -143,7 +143,7 @@
 
 <!-- Top prices -->
 <div class="text-2xl text-white text-center font-bold">
-	Compra ${($ARSprice * 1e5).toLocaleString('es-AR', {
+	Compra ${$ARSprice.toLocaleString('es-AR', {
 		minimumFractionDigits: 2,
 		maximumFractionDigits: 2
 	})}

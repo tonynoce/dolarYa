@@ -24,7 +24,7 @@ export const getRate = async() => {
 
   //dataUSD = {ARStoUSD : dataUSD.USD.ARS};
   //dataUSD = dataUSD.ARStoUSD;
-  dataUSD = responseJSON.compra;
+  dataUSD = responseJSON.venta;
   
   //let responseARS = await fetch(urlARS);
   //dataARS = await responseARS.json();
@@ -32,7 +32,7 @@ export const getRate = async() => {
   
   //dataARS = {USDtoARS : dataARS.ARS.USD};
   //dataARS = dataARS.USDtoARS;
-  dataARS = responseJSON.venta;
+  dataARS = responseJSON.compra;
 
   // USDprice.set(dataUSD.toFixed(2));
   USDprice.set(dataUSD);
